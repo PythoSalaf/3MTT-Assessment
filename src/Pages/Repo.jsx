@@ -1,17 +1,18 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { HiViewGrid } from "react-icons/hi";
 import { IoListSharp } from "react-icons/io5";
+import { MdFilterList } from "react-icons/md";
 const Repo = () => {
   const activeLink = "relative group text-primary";
   const normalLink = "relative group text-black";
   return (
     <div className="w-full mt-[4rem]">
       <div className="w-[96%] md:w-[90%] mx-auto">
-        <h2 className="text-center py-[1rem] capitalize font-semibold text-2xl md:3xl lg:4xl ">
+        <h2 className="text-center py-[1rem] capitalize font-semibold text-2xl md:text-3xl lg:text-4xl text-primary">
           Your Repositories
         </h2>
         <div className=" flex flex-col md:flex-row gap-5 md:gap-0 items-center justify-between mt-6">
-          <div className="flex items-center gap-x-8 shadow-primaryCustom px-3 py-2 rounded-xl">
+          <div className="w-[60%] md:w-fit bg-white justify-between md:justify-normal flex items-center gap-x-8 shadow-primaryCustom px-3 py-2 rounded-xl">
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
@@ -31,9 +32,12 @@ const Repo = () => {
               </span>
             </NavLink>
           </div>
-          <p className="text-lg md:text-xl">Showing 1-9 of 23 repositories</p>
-          <div className="hidden md:flex items-center gap-x-4">
+          <p className="text-base md:text-lg mt-2 md:mt-0">
+            Showing 1-9 of 23 repositories
+          </p>
+          <div className="hidden md:flex items-center gap-x-3 text-white bg-primary shadow-custom px-4 py-2 cursor-pointer rounded-xl">
             <p>Filter</p>
+            <MdFilterList size={20} />
           </div>
         </div>
         <div className="w-full my-[2rem]">

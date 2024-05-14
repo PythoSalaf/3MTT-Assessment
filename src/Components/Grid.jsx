@@ -21,7 +21,7 @@ const AnimatedRepoCard = ({ index, ...props }) => {
 
   const transition = {
     duration: 0.6,
-    delay: index * 0.3, // Adjust the delay as needed
+    delay: index * 0.3,
   };
 
   return (
